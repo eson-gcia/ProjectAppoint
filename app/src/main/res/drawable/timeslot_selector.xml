@@ -1,0 +1,39 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Selected unavailable (red with black stroke) -->
+    <item android:state_selected="true" android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#EF9A9A"/>
+            <stroke android:width="2dp" android:color="#000000"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <!-- Selected available (green with black stroke) -->
+    <item android:state_selected="true" android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#75FF93"/>
+            <stroke android:width="2dp" android:color="#000000"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <!-- Unavailable (red, no stroke) -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#EF9A9A"/>
+            <stroke android:width="0dp" android:color="#000000"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+    <!-- Available (green, no stroke) -->
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#75FF93"/>
+            <stroke android:width="0dp" android:color="#000000"/>
+            <corners android:radius="100dp"/>
+        </shape>
+    </item>
+
+</selector>

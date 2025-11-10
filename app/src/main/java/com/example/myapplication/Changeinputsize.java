@@ -1,4 +1,4 @@
-package com.example.myapplication;
+/*package com.example.myapplication;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -23,7 +23,7 @@ public class Changeinputsize extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         // Load layout file
-        setContentView(R.layout.login);
+        setContentView(R.layout.activity_change_input_size);
 
         // 1. Setup Email Field
         AppCompatEditText editTextE = findViewById(R.id.editTextE);
@@ -68,10 +68,7 @@ public class Changeinputsize extends AppCompatActivity {
 
     }
 
-    /**
-     * Sets the styled hint (12sp, 50% black) and attaches the TextWatcher
-     * for dynamic sizing (16sp when typing).
-     */
+
     private void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
         // --- Hint Styling: 12sp size and 50% Black color ---
         SpannableString ss = new SpannableString(hintText);
@@ -108,4 +105,4 @@ public class Changeinputsize extends AppCompatActivity {
             }
         });
     }
-}
+} */

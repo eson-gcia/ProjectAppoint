@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FEF4D6"
+    tools:context=".PatientDashboardCalendar">
+
+    <!-- Top Header Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:background="#FFF3B9">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="145dp"
+            android:layout_height="87dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/__10" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="189dp"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="-6dp"
+            android:layout_marginBottom="38dp"
+            android:layout_toEndOf="@id/logo"
+            android:fontFamily="@font/popsemibold"
+            android:text="Lorem Ipsum"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="17dp"
+            android:layout_toEndOf="@id/logo"
+            android:fontFamily="@font/popreg"
+            android:text="Patient"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/pprofile1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_gray"
+            android:scaleType="centerCrop"
+            android:src="@drawable/catttt"
+            app:shapeAppearanceOverlay="@style/CircularImageView"
+            app:strokeColor="#000000" />
+    </RelativeLayout>
+
+    <!-- Calendar Section -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="557dp"
+        android:padding="1dp">
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="385dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="33dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:dateTextAppearance="@style/CalendarDateText"
+            app:firstDayOfWeek="@integer/monday"
+            app:selectionColor="@color/black"
+            app:eventsEnabled="true" />
+
+        <FrameLayout
+            android:id="@+id/dynamicLayout"
+            android:layout_width="410dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@+id/calendarView"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="364dp"
+            android:layout_marginBottom="75dp" />
+
+        <FrameLayout
+            android:id="@+id/dynamicLayout2"
+            android:layout_width="410dp"
+            android:layout_height="2dp"
+            android:layout_alignBottom="@+id/dynamicLayout"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="379dp"
+            android:layout_marginBottom="-14dp" />
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="207dp"
+            android:layout_height="52dp"
+            android:layout_alignBottom="@+id/dynamicLayout2"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="111dp"
+            android:layout_marginTop="446dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginBottom="58dp"
+            android:backgroundTint="@color/button_enabled_state"
+            android:enabled="false"
+            android:fontFamily="@font/popbold"
+            android:text="Book Appointment"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/textViewbookapp"
+            android:layout_width="160dp"
+            android:layout_height="24dp"
+            android:textColor="@color/black"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="212dp"
+            android:layout_marginBottom="502dp"
+            android:fontFamily="@font/popbold"
+            android:text="Book an Appointment" />
+    </RelativeLayout>
+
+    <!-- Footer / Navigation Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="#FFF7D6"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <LinearLayout
+            android:id="@+id/footerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="#FFF7D6"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp">
+
+            <!-- Home -->
+            <LinearLayout
+                android:id="@+id/nav_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/icon_home"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/navhomeon"
+                    android:contentDescription="Home" />
+
+                <TextView
+                    android:id="@+id/text_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Home"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popreg" />
+            </LinearLayout>
+
+            <!-- Appointments -->
+            <LinearLayout
+                android:id="@+id/nav_appointments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/icon_appointments"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/navappointoff"
+                    android:contentDescription="Appointments" />
+
+                <TextView
+                    android:id="@+id/text_appointments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Appointments"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popreg" />
+            </LinearLayout>
+
+            <!-- Notifications -->
+            <LinearLayout
+                android:id="@+id/nav_notifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/icon_notifications"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:contentDescription="Notifications"
+                    android:src="@drawable/navnotifoff" />
+
+                <TextView
+                    android:id="@+id/text_notifications"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/popreg"
+                    android:text="Notifications"
+                    android:textColor="#000000"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Profile -->
+            <LinearLayout
+                android:id="@+id/nav_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/icon_profile"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/navprofoff"
+                    android:contentDescription="Profile" />
+
+                <TextView
+                    android:id="@+id/text_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Profile"
+                    android:textSize="13sp"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popreg" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

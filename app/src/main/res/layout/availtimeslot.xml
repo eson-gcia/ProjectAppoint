@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/timeslotforcalendar"
+    android:orientation="vertical"
+    android:layout_margin="70dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/buttonradiusfortime"> <!-- soft cream tone -->
+
+
+
+    <!-- First row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time1"
+            android:layout_margin="6dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time2"
+            android:layout_margin="20dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time3"
+            android:layout_margin="6dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+
+
+    </LinearLayout>
+
+    <!-- Second row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time4"
+            android:layout_margin="6dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time5"
+            android:layout_margin="20dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/time6"
+            android:layout_margin="6dp"
+            android:text="1:00 PM"
+            android:textColor="#000000"
+            android:paddingHorizontal="1dp"
+            android:layout_width="60dp"
+            android:background="@drawable/timeslot_selector"
+            android:layout_height="30dp" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -19,7 +19,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/__10"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:id="@+id/view"
@@ -29,7 +30,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="559dp" />
+        tools:layout_editor_absoluteY="559dp"
+        tools:ignore="MissingConstraints" />
 
 
     <CheckBox
@@ -41,19 +43,21 @@
         app:buttonCompat="@drawable/checkbox_selector"
         app:buttonIcon="@drawable/checkbox_selector"
         tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="559dp" />
+        tools:layout_editor_absoluteY="559dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:text="Remember Me"
         android:textColor="#1D1A1A"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="574dp" />
+        tools:layout_editor_absoluteY="574dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogin"
@@ -62,7 +66,7 @@
         android:paddingBottom="8dp"
         android:layout_height="33dp"
         android:background="@drawable/buttonradius"
-        android:fontFamily="@font/Popbold"
+        android:fontFamily="@font/popbold"
         android:gravity="center"
         android:text="LOGIN"
         android:textAllCaps="true"
@@ -72,7 +76,8 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="615dp" />
+        tools:layout_editor_absoluteY="615dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextPW"
@@ -80,7 +85,7 @@
         android:layout_height="50dp"
         android:background="@drawable/background_login"
         android:ems="10"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingStart="16dp"
@@ -91,12 +96,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="470dp" />
+        tools:layout_editor_absoluteY="470dp"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/editTextE"
         android:layout_width="300dp"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:layout_height="50dp"
         android:background="@drawable/background_login"
         android:hint="Email"
@@ -109,14 +115,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="377dp" />
+        tools:layout_editor_absoluteY="377dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewEError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*Password"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:textColor="#FF0000"
         android:textSize="12sp"
         android:visibility="visible"
@@ -124,21 +131,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.609"
         tools:layout_editor_absoluteX="73dp"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:text="Don't have an account?"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="655dp" />
+        tools:layout_editor_absoluteY="655dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewRegisterQuestion"
@@ -146,14 +155,15 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:clickable="true"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:text="Register"
         android:textColor="#0000FF"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.689"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="655dp" />
+        tools:layout_editor_absoluteY="655dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewPWError"
@@ -161,28 +171,30 @@
         android:layout_height="wrap_content"
         android:text="*Password"
         android:textColor="#FF0000"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.738"
         tools:layout_editor_absoluteX="73dp"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textViewForgotPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Forgot Password"
-        android:fontFamily="@font/Popreg"
+        android:fontFamily="@font/popreg"
         android:clickable="true"
         android:textColor="#0000FF"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="574dp" />
+        tools:layout_editor_absoluteY="574dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

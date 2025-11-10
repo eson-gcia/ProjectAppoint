@@ -9,5 +9,5 @@
     </item>
 
     <!-- Black checkmark -->
-    <item android:drawable="@drawable/checkmark" />
+    <item android:drawable="@drawable/checkmark1" />
 </layer-list>
