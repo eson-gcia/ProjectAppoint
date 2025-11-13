@@ -68,17 +68,17 @@
                 android:layout_marginBottom="75dp"
                 android:background="@drawable/rectangle_bg3" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text_description2"
                 android:layout_width="263dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="107dp"
+                android:layout_marginStart="104dp"
                 android:layout_marginTop="209dp"
-                android:layout_marginEnd="44dp"
-                android:layout_marginBottom="171dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="163dp"
                 android:fontFamily="@font/popbold"
                 android:lineSpacingExtra="4dp"
                 android:linksClickable="true"
@@ -122,20 +122,20 @@
                 android:textColor="#000000"
                 android:textSize="14sp" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text_description5"
-                android:layout_width="263dp"
-                android:layout_height="wrap_content"
+                android:layout_width="274dp"
+                android:layout_height="58dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="96dp"
+                android:layout_marginStart="91dp"
                 android:layout_marginTop="209dp"
                 android:layout_marginEnd="51dp"
-                android:linksClickable="true"
-                android:layout_marginBottom="84dp"
+                android:layout_marginBottom="65dp"
                 android:fontFamily="@font/popreg"
                 android:lineSpacingExtra="4dp"
+                android:linksClickable="true"
                 android:text="https://meet.google.com/abc-mnop-xyz"
                 android:textColor="#000000"
                 android:textSize="12sp" />
@@ -300,17 +300,17 @@
                 android:layout_marginBottom="9dp"
                 android:src="@drawable/mdi_bell" />
 
-            <TextView
+            <EditText
                 android:id="@+id/text_description_bottom"
                 android:layout_width="262dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="99dp"
+                android:layout_marginStart="92dp"
                 android:layout_marginTop="209dp"
-                android:layout_marginEnd="51dp"
-                android:layout_marginBottom="1dp"
+                android:layout_marginEnd="64dp"
+                android:layout_marginBottom="-9dp"
                 android:fontFamily="@font/popreg"
                 android:lineSpacingExtra="4dp"
                 android:text="Don't forget your appointment tomorrow at 9:00 am"
