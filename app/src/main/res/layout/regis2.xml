@@ -3,33 +3,37 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    tools:context=".Changeinputsizeregis2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
-    tools:context=".Changeinputsize"
-    tools:layout_editor_absoluteX="-18dp"
-    tools:layout_editor_absoluteY="0dp">
+
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="27dp">
 
     <!-- Company logo -->
 
 
+    <!-- Gender-->
+
+    <!-- DOB-->
+
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="256dp"
-        android:layout_height="247dp"
+        android:layout_width="291dp"
+        android:layout_height="293dp"
         app:srcCompat="@drawable/__10"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
-    <!-- Gender-->
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="16dp" />
 
     <EditText
         android:id="@+id/etgen"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/background_login"
-        android:hint="Gender"
         android:fontFamily="@font/popreg"
+        android:hint="Gender"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingEnd="18dp"
@@ -39,31 +43,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="290dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="362dp" />
 
-    <TextView
-        android:id="@+id/generror"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="*Password"
-        android:fontFamily="@font/popreg"
-        android:textColor="#FF0000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
-        tools:layout_editor_absoluteX="70dp"
-        tools:visibility="visible" />
-    <!-- DOB-->
     <EditText
         android:id="@+id/etdob"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:background="@drawable/background_login"
-        android:hint="Date of Birth"
         android:fontFamily="@font/popreg"
+        android:hint="Date of Birth"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
         android:paddingEnd="18dp"
@@ -73,57 +62,81 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="385dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="457dp" />
 
     <TextView
         android:id="@+id/doberror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/popreg"
         android:text="*Password"
         android:textColor="#FF0000"
-        android:fontFamily="@font/popreg"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.62"
+        app:layout_constraintVertical_bias="0.593"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
-        tools:visibility="visible"
-        tools:ignore="MissingConstraints" />
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/generror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/popreg"
+        android:text="*Password"
+        android:textColor="#FF0000"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48"
+        tools:layout_editor_absoluteX="70dp"
+        tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnbck1"
+        android:id="@+id/btnback1"
         android:layout_width="77dp"
         android:layout_height="37dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
         android:fontFamily="@font/popbold"
-        android:text="BACK"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:text="BACK "
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="674dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btntonext1"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:layout_width="77dp"
         android:layout_height="37dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
         android:fontFamily="@font/popbold"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="NEXT"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="674dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968"
         tools:ignore="MissingConstraints" />
 
 

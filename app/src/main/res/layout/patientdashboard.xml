@@ -25,16 +25,16 @@
 
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/textView2"
             android:layout_width="189dp"
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginEnd="-6dp"
-            android:layout_marginBottom="38dp"
+            android:layout_marginStart="79dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="40dp"
             android:layout_toEndOf="@id/logo"
             android:fontFamily="@font/popsemibold"
             android:text="Lorem Ipsum"
@@ -42,14 +42,16 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="141dp"
-            android:layout_marginTop="48dp"
-            android:layout_marginBottom="17dp"
+            android:layout_marginStart="142dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="-38dp"
+            android:layout_marginBottom="21dp"
             android:layout_toEndOf="@id/logo"
             android:fontFamily="@font/popreg"
             android:text="Patient"
@@ -77,48 +79,48 @@
     <!-- Illustration and tagline -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="320dp"
+        android:layout_height="415dp"
         android:padding="1dp">
 
 
-
         <!-- Your existing illustration -->
+
+        <!-- Your existing text -->
+
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/illustration"
-            android:layout_width="243dp"
-            android:layout_height="265dp"
+            android:layout_width="261dp"
+            android:layout_height="342dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="185dp"
-            android:layout_marginTop="1dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="77dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="-1dp"
+            android:layout_marginBottom="71dp"
             android:contentDescription="Illustration"
             android:scaleType="centerCrop"
             android:src="@drawable/background_image"
             app:shapeAppearanceOverlay="@style/RoundedImageStyle" />
 
-        <!-- Your existing text -->
         <TextView
             android:id="@+id/text_description1"
-            android:layout_width="185dp"
-            android:layout_height="137dp"
+            android:layout_width="180dp"
+            android:layout_height="116dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="79dp"
-            android:layout_marginEnd="212dp"
-            android:layout_marginBottom="108dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="236dp"
+            android:layout_marginBottom="183dp"
             android:fontFamily="@font/popreg"
             android:lineSpacingExtra="4dp"
             android:text="Every conversation matters. GlimmerMind bridges the gap between you and your clients, creating space for real connection and care."
             android:textColor="#000000"
-            android:textSize="13sp" />
-
+            android:textSize="12sp" />
 
 
     </RelativeLayout>
@@ -126,10 +128,9 @@
     <!-- Grid Buttons Section -->
 
 
-
     <GridLayout
         android:layout_width="315dp"
-        android:layout_height="235dp"
+        android:layout_height="269dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:alignmentMode="alignMargins"
@@ -142,19 +143,19 @@
 
         <!-- Manage Profile -->
         <LinearLayout
-            android:id="@+id/btnManageProfile"
-            android:layout_width="131dp"
-            android:layout_height="97dp"
+            android:id="@+id/btnManageProfile1"
+            android:layout_width="138dp"
+            android:layout_height="127dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/image_rounded"
-            android:gravity="center"
-            android:orientation="vertical"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/manpro1"
+                android:id="@+id/manpro2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:onClick="onImageClick"
@@ -163,8 +164,9 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:clickable="true"
                 android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/popreg"
                 android:text="Manage Profile"
                 android:textColor="#000000"
@@ -173,52 +175,52 @@
 
         <!-- Book Appointment -->
         <LinearLayout
-            android:id="@+id/btncal"
-            android:layout_width="131dp"
-            android:layout_height="97dp"
+            android:id="@+id/btnAvail"
+            android:layout_width="138dp"
+            android:layout_height="127dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/image_rounded"
-            android:gravity="center"
-            android:orientation="vertical"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/calen1"
                 android:layout_width="54dp"
                 android:layout_height="54dp"
+                android:layout_marginBottom="5dp"
                 android:onClick="onImageClick"
                 android:src="@drawable/appoint"
                 app:tint="#68382E" />
 
             <TextView
                 android:layout_width="wrap_content"
-                android:clickable="true"
                 android:layout_height="wrap_content"
+                android:clickable="true"
                 android:fontFamily="@font/popreg"
-                android:text="Book an appointment calendar"
+                android:text="Book an appointment calender"
                 android:textAlignment="center"
                 android:textColor="#000000"
-                android:textSize="11sp" />
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- Assessment Test -->
         <LinearLayout
-            android:id="@+id/btnAssessment"
-            android:layout_width="131dp"
-            android:layout_height="97dp"
+            android:id="@+id/btnDash"
+            android:layout_width="138dp"
+            android:layout_height="127dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/image_rounded"
-            android:gravity="center"
-            android:orientation="vertical"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
                 android:onClick="onImageClick"
                 android:src="@drawable/test"
                 app:tint="#68382E" />
@@ -226,9 +228,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/popreg"
                 android:clickable="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/popreg"
                 android:text="Take Assessment Test"
+                android:textAlignment="center"
                 android:textColor="#000000"
                 android:textSize="12sp" />
         </LinearLayout>
@@ -236,28 +240,28 @@
         <!-- About Us -->
         <LinearLayout
             android:id="@+id/btnAbout"
-            android:layout_width="131dp"
-            android:layout_height="97dp"
+            android:layout_width="138dp"
+            android:layout_height="127dp"
             android:layout_columnWeight="1"
             android:layout_margin="8dp"
             android:background="@drawable/image_rounded"
-            android:gravity="center"
-            android:orientation="vertical"
             android:clickable="true"
-            android:focusable="true">
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical">
 
             <ImageView
-                android:layout_width="60dp"
+                android:layout_width="69dp"
+                android:layout_height="70dp"
                 android:onClick="onImageClick"
-                android:layout_height="60dp"
                 android:src="@drawable/aboutus"
                 app:tint="#68382E" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/popreg"
                 android:clickable="true"
+                android:fontFamily="@font/popreg"
                 android:text="About Us"
                 android:textColor="#000000"
                 android:textSize="14sp" />
@@ -273,7 +277,7 @@
 
         <!-- Container for the nav items -->
         <LinearLayout
-            android:id="@+id/footerContainer"
+            android:id="@+id/thefooterContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -292,14 +296,14 @@
                 android:focusable="true">
 
                 <ImageView
-                    android:id="@+id/icon_home"
+                    android:id="@+id/theicon_home"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:src="@drawable/navhomeon"
                     android:contentDescription="Home" />
 
                 <TextView
-                    android:id="@+id/text_home"
+                    android:id="@+id/text_home1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -321,19 +325,19 @@
                 android:focusable="true">
 
                 <ImageView
-                    android:id="@+id/icon_appointments"
+                    android:id="@+id/theicon_appointments"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:src="@drawable/navappointoff"
                     android:contentDescription="Appointments" />
 
                 <TextView
-                    android:id="@+id/text_appointments"
+                    android:id="@+id/text_appointments1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="Appointments"
-                    android:textSize="13sp"
+                    android:textSize="12sp"
                     android:textColor="#000000"
                     android:fontFamily="@font/popreg" />
             </LinearLayout>
@@ -352,14 +356,14 @@
                 android:focusable="true">
 
                 <ImageView
-                    android:id="@+id/icon_notifications"
+                    android:id="@+id/theicon_notifications"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:contentDescription="Notifications"
                     android:src="@drawable/navnotifoff" />
 
                 <TextView
-                    android:id="@+id/text_notifications"
+                    android:id="@+id/text_notifications1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
@@ -380,14 +384,14 @@
                 android:focusable="true">
 
                 <ImageView
-                    android:id="@+id/icon_profile"
+                    android:id="@+id/theicon_profile"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:src="@drawable/navprofoff"
                     android:contentDescription="Profile" />
 
                 <TextView
-                    android:id="@+id/text_profile"
+                    android:id="@+id/text_profile1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"

@@ -3,33 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    tools:context=".Changeinputsizeregis3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
-    tools:context=".Changeinputsize"
-    tools:layout_editor_absoluteX="-18dp"
-    tools:layout_editor_absoluteY="0dp">
+    tools:layout_editor_absoluteX="18dp"
+    tools:layout_editor_absoluteY="-3dp">
 
     <!-- Company logo -->
 
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="256dp"
-        android:layout_height="247dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/__10"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+    <!-- DOB-->
 
 
     <EditText
         android:id="@+id/etpas"
         android:layout_width="300dp"
-        android:fontFamily="@font/popreg"
         android:layout_height="50dp"
         android:background="@drawable/background_login"
+        android:fontFamily="@font/popreg"
         android:hint="Password"
         android:inputType="textEmailAddress"
         android:paddingStart="16dp"
@@ -37,29 +29,60 @@
         android:singleLine="true"
         android:textColor="#000000"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="290dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.411"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/parerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="*Password"
         android:fontFamily="@font/popreg"
+        android:text="*Password"
         android:textColor="#FF0000"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
-        tools:layout_editor_absoluteX="70dp"
-        tools:visibility="visible"
-        tools:ignore="MissingConstraints" />
-    <!-- DOB-->
+        app:layout_constraintVertical_bias="0.466"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible" />
 
+    <TextView
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:fontFamily="@font/popreg"
+        android:inputType="text"
+        android:text="Password must be:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="291dp"
+        android:layout_height="293dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088"
+        app:srcCompat="@drawable/__10"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/etconpa"
@@ -74,10 +97,12 @@
         android:singleLine="true"
         android:textColor="#000000"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="428dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.631"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -90,23 +115,27 @@
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673"
-        tools:layout_editor_absoluteX="70dp"
+        app:layout_constraintVertical_bias="0.675"
         tools:visibility="visible" />
 
     <TextView
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="192dp"
         android:fontFamily="@font/popreg"
         android:text="By registration you agreed upon our"
         android:textColor="#1D1A1A"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.403"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.773" />
 
     <TextView
         android:id="@+id/textViewpol"
@@ -117,24 +146,27 @@
         android:text="Privacy Policy. "
         android:textColor="#0000FF"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="536dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="175dp"
         android:fontFamily="@font/popreg"
         android:text="and"
         android:textColor="#1D1A1A"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797" />
 
     <CheckBox
         android:id="@+id/checkcon"
@@ -144,8 +176,12 @@
         android:buttonTintMode="multiply"
         app:buttonCompat="@drawable/checkbox_selector"
         app:buttonIcon="@drawable/checkbox_selector"
-        tools:layout_editor_absoluteX="35dp"
-        tools:layout_editor_absoluteY="505dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -157,71 +193,58 @@
         android:text="Terms and Condition "
         android:textColor="#0000FF"
         android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintHorizontal_bias="0.303"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="536dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.797"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnbck2"
+        android:id="@+id/btnback2"
         android:layout_width="77dp"
         android:layout_height="37dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
+        android:fontFamily="@font/popbold"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:fontFamily="@font/popbold"
         android:text="BACK"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
-        android:textSize="14dp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958" />
+        app:layout_constraintVertical_bias="0.968"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnmakeacc"
         android:layout_width="119dp"
-        android:layout_height="38dp"
+        android:layout_height="37dp"
         android:background="@drawable/buttonrad1"
+        android:backgroundTint="@color/button_enabled_state"
+        android:enabled="true"
         android:fontFamily="@font/popbold"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:text="Create Account"
-        android:backgroundTint="@color/button_enabled_state"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:enabled="true"
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958" />
-
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="Password must be:"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.512" />
+        app:layout_constraintVertical_bias="0.968" />
 
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -237,7 +260,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.532" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextda2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -253,7 +276,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.56" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTexmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -270,7 +293,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.533" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextTextma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -285,7 +308,7 @@
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.555" />
+        app:layout_constraintVertical_bias="0.557" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

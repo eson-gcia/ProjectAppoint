@@ -85,21 +85,22 @@
     <!-- Therapist Name -->
 
     <!-- Profession -->
-    <TextView
+    <EditText
         android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
+        android:layout_width="113dp"
+        android:layout_height="39dp"
         android:layout_marginBottom="1dp"
         android:fontFamily="@font/popbold"
         android:text="Lorem Ipsim"
-        android:textColor="#000000"
-        android:textSize="17sp" />
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
-    <TextView
+
+    <EditText
         android:id="@+id/tv_profession"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Licensed Psychologist • CBT Specialist"
+        android:text="Licensed Clinical Psychologist"
         android:fontFamily="@font/popreg"
         android:textColor="#000000"
         android:textSize="12sp"
@@ -118,7 +119,7 @@
         android:textSize="15sp" />
 
     <!-- My Approach body -->
-    <TextView
+    <EditText
         android:id="@+id/tv_my_approach"
         android:layout_width="wrap_content"
         android:layout_height="125dp"
@@ -177,7 +178,7 @@
         android:layout_marginBottom="8dp">
 
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ph.D. in Psychology – University of the Philippines"
@@ -221,7 +222,7 @@
 
 
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Registered Psychologist (RPsy) – PRC License No. 123456"
@@ -268,7 +269,7 @@
 
 
 
-        <TextView
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Certified Cognitive Behavioral Therapist (CCBT)"
