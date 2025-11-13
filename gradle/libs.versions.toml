@@ -7,10 +7,11 @@ appcompat = "1.7.1"
 material = "1.13.0"
 activity = "1.11.0"
 constraintlayout = "2.2.1"
-material-calendar = "1.9.2"
+material-calendar = "2.0.1"
+
 
 [libraries]
-material-calendar-view = { group = "com.applandeo", name = "material-calendar-view", version.ref = "material-calendar" }
+material-calendar-view = { module = "com.prolificinteractive:material-calendarview", version = "1.4.3" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

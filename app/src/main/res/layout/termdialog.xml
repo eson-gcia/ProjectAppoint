@@ -49,7 +49,7 @@
             <ScrollView
                 android:id="@+id/scrollView"
                 android:layout_width="match_parent"
-                android:layout_height="460dp"
+                android:layout_height="676dp"
                 android:layout_marginTop="17dp"
                 android:fadeScrollbars="true"
                 android:scrollbarThumbVertical="@drawable/scrollbar_thumb"

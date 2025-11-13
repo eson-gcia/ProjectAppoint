@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollViewAboutUs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fadeScrollbars="true"
+    android:scrollbarThumbVertical="@drawable/scrollbar_thumb"
+    android:scrollbars="vertical"
+    android:background="#FFF3B9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== ORIGINAL SECTION ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:clickable="true"
+                android:layout_width="53dp"
+                android:layout_height="24dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="356dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="2dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Close"
+                android:padding="17dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/xmarkforaboutus" />
+
+            <ImageView
+                android:id="@+id/logoBackground"
+                android:layout_width="344dp"
+                android:layout_height="192dp"
+                android:layout_below="@id/btnClose"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="49dp"
+                android:layout_marginTop="-7dp"
+                android:layout_marginEnd="18dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/blobshapeforaboutus" />
+
+            <ImageView
+                android:id="@+id/logoImage"
+                android:layout_width="402dp"
+                android:layout_height="253dp"
+                android:layout_below="@id/btnClose"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="-17dp"
+                android:layout_marginTop="-63dp"
+                android:layout_marginEnd="26dp"
+                android:contentDescription="Company Logo"
+                android:scaleType="centerCrop"
+                android:src="@drawable/__10" />
+
+            <TextView
+                android:id="@+id/aboutTitle"
+                android:layout_width="132dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logoImage"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="17dp"
+                android:layout_marginEnd="123dp"
+                android:text="ABOUT US"
+                android:textAlignment="center"
+                android:fontFamily="@font/popsemibold"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/aboutText"
+                android:layout_width="match_parent"
+                android:layout_height="315dp"
+                android:layout_below="@id/aboutTitle"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:lineSpacingExtra="4dp"
+                android:padding="15dp"
+                android:text="Welcome to GlimmerMind your trusted space for mental wellness and therapy connections.\n\nGlimmerMind is an appointment system app designed to make therapy more accessible and organized. Here, users can easily book sessions, manage schedules, and connect with mental health professionals in a simple, stress-free way.\n\nOur goal is to create a calm, supportive space for anyone taking steps toward better mental health. In the future, GlimmerMind will grow into a complete wellness platform where learning, self-assessment, and professional help come together to guide you toward a clearer, lighter mind."
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                android:fontFamily="@font/popreg"/>
+        </RelativeLayout>
+
+        <!-- ===== SECTION 1 ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Scaled-up Image -->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/psychassisst"/>
+
+
+            <!-- Increased from 200dp -->
+
+
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PSYCHIATRIC ASSISTANCE"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popsemibold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Living with mental illness will always be a battle, but getting the proper treatment will make it much more manageable, allowing you to enjoy everything life has to offer without your condition getting in the way."
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popreg"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="6dp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- ===== SECTION 2 ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Text Section (Left) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/osycassessment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/popsemibold"
+                    android:text="PSYCHIATRIC ASSESSMENT"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/Assesmentdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Having a mental health assessment gives your doctor a picture of the way you think, feel, reason and remember. The mental health test assesses your emotional well being via a series of questions and also includes a physical examination."
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/popreg"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="6dp" />
+
+
+            </LinearLayout>
+
+            <!-- Image on the Right -->
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/psychassessment"
+                android:contentDescription="Section 3 image" />
+        </LinearLayout>
+
+        <!-- ===== SECTION 3 ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Text Section (Left) -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="16dp">
+
+                <TextView
+                    android:id="@+id/communityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PSYCHIATRIC  HISTORY"
+                    android:textColor="#000000"
+                    android:fontFamily="@font/popsemibold"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/communityDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A licensed clinical psychologist, has accumulated diverse clinical experience over the past 10 years. After completing her doctoral training in clinical psychology at a reputable university, Dr. pursued a one-year internship at a psychiatric hospital specializing in mood and anxiety disorders."
+                    android:textColor="#000000"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/popreg"
+                    android:lineSpacingExtra="4dp"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- Additional Text Below -->
+
+            </LinearLayout>
+
+            <!-- Image on the Right -->
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/psychhistory"
+                android:contentDescription="Section 3 image" />
+        </LinearLayout>
+        <!-- ===== SECTION 4: CONTACT US ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/contactTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTACT US"
+                android:fontFamily="@font/popbold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+
+                <!-- Instagram Card -->
+                <LinearLayout
+                    android:layout_width="13dp"
+                    android:layout_height="115dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_blue_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:contentDescription="Instagram Icon"
+                        android:src="@drawable/iglogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GlimmerMind"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/popreg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popreg"
+                        android:text="\@gmail.com"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- Facebook Card -->
+                <LinearLayout
+                    android:layout_width="13dp"
+                    android:layout_height="115dp"
+                    android:layout_margin="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_blue_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="20dp"
+                        android:contentDescription="fb Icon"
+                        android:src="@drawable/fblogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glimmer Mind"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/popreg" />
+                </LinearLayout>
+
+                <!-- Phone Card -->
+                <LinearLayout
+                    android:layout_width="13dp"
+                    android:layout_height="115dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_blue_bg"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:contentDescription="Instagram Icon"
+                        android:src="@drawable/phonelogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+63 912345678"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                       />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/popreg"
+                        android:text="GlimmerMind"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

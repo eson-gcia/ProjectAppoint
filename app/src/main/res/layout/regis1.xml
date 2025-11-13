@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    tools:context=".Changeinputsizeregis1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
-    tools:context=".Changeinputsize"
     tools:layout_editor_absoluteX="-18dp"
     tools:layout_editor_absoluteY="0dp">
 
@@ -15,10 +15,11 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="256dp"
-        android:layout_height="247dp"
+        android:layout_width="291dp"
+        android:layout_height="293dp"
         app:srcCompat="@drawable/__10"
-        tools:layout_editor_absoluteX="78dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="16dp" />
     <!-- First Name -->
 
@@ -41,7 +42,7 @@
         tools:layout_editor_absoluteY="290dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/fnerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -52,10 +53,10 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.486"
+        app:layout_constraintVertical_bias="0.401"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
-        tools:visibility="visible"
-        tools:ignore="MissingConstraints" />
+        tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etln"
@@ -76,7 +77,7 @@
         tools:layout_editor_absoluteY="385dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/lnerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,55 +111,55 @@
         tools:layout_editor_absoluteY="477dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <EditText
         android:id="@+id/emerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/popreg"
         android:text="*Password"
         android:textColor="#FF0000"
         android:textSize="12sp"
-        android:fontFamily="@font/popreg"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.748"
+        app:layout_constraintVertical_bias="0.51"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="70dp"
-        tools:visibility="visible"
-        tools:ignore="MissingConstraints" />
+        tools:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnLoginback"
         android:layout_width="143dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:layout_height="37dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
         android:fontFamily="@font/popbold"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="BACK TO LOGIN"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="674dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="827dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btntonext"
         android:layout_width="77dp"
         android:layout_height="37dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
         android:fontFamily="@font/popbold"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:text="NEXT"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
-        tools:layout_editor_absoluteX="300dp"
-        tools:layout_editor_absoluteY="674dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="298dp"
+        tools:layout_editor_absoluteY="827dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
