@@ -8,13 +8,14 @@ import android.text.TextWatcher;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.TypedValue;
+import android.view.View;
 
 import androidx.appcompat.widget.AppCompatEditText;
 
-public class InputStylingUtils {
+public class TextStylingUtils {
 
     // Define standard sizes for reuse
-    private static final float HINT_SIZE_SP = 12f;
+    private static final float HINT_SIZE_SP = 14f;
     private static final float TYPED_TEXT_SIZE_SP = 16f;
 
     public static void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
@@ -22,7 +23,7 @@ public class InputStylingUtils {
         SpannableString ss = new SpannableString(hintText);
 
         // Set hint size to 12sp (false = SP, true = DP)
-        ss.setSpan(new AbsoluteSizeSpan((int) HINT_SIZE_SP, false), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(new AbsoluteSizeSpan((int) HINT_SIZE_SP, true), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         // Set 50% opacity black color (#80000000)
         ss.setSpan(new ForegroundColorSpan(Color.parseColor("#80000000")), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -53,4 +54,21 @@ public class InputStylingUtils {
             }
         });
     }
+
+    public static void showAndFadeOut(View view, long visibleDurationMs) {
+
+        // Instantly show the view
+        view.setAlpha(1f);
+        view.setVisibility(View.VISIBLE);
+
+        // Wait, then fade out
+        view.postDelayed(() -> {
+            view.animate()
+                    .alpha(0f)
+                    .setDuration(200)
+                    .withEndAction(() -> view.setVisibility(View.INVISIBLE))
+                    .start();
+        }, visibleDurationMs);
+    }
+
 }
