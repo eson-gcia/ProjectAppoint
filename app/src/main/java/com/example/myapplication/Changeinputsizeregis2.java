@@ -23,9 +23,6 @@ public class Changeinputsizeregis2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load layout file
-        setContentView(R.layout.activity_change_input_size);
-
         // 4. Setup Gender Field
         AppCompatEditText etgen = findViewById(R.id.etgen);
         setupHintAndTextWatcher(etgen, "Gender");

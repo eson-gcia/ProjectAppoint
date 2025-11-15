@@ -23,10 +23,6 @@ public class Changeinputsizeregis1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load layout file
-        setContentView(R.layout.activity_change_input_size);
-
-
         // 1. First name
         AppCompatEditText etfn = findViewById(R.id.etfn);
         setupHintAndTextWatcher(etfn, "First Name");

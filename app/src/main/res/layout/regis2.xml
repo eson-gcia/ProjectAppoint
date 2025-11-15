@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="16dp" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/etgen"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -46,7 +46,7 @@
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="362dp" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etdob"
         android:layout_width="300dp"
         android:layout_height="50dp"

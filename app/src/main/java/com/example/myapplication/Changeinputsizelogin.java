@@ -22,19 +22,6 @@ public class Changeinputsizelogin extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load layout file
-        setContentView(R.layout.activity_change_input_size);
-
-        // 1. Setup Email Field
-        AppCompatEditText editTextE = findViewById(R.id.editTextE);
-        setupHintAndTextWatcher(editTextE, "Email");
-
-
-        // 2. Setup Password Field
-        AppCompatEditText editTextPW = findViewById(R.id.editTextPW);
-        setupHintAndTextWatcher(editTextPW, "Password");
-
-
     }
 
 

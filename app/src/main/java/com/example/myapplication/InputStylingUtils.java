@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -10,30 +9,15 @@ import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.TypedValue;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
-public class Changeinputsizeforgot extends AppCompatActivity {
+public class InputStylingUtils {
 
     // Define standard sizes for reuse
     private static final float HINT_SIZE_SP = 12f;
     private static final float TYPED_TEXT_SIZE_SP = 16f;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // Load layout file
-        setContentView(R.layout.activity_change_input_size);
-
-
-        // 1. Forget password field
-        AppCompatEditText editTextEbar = findViewById(R.id.editTextEbar);
-        setupHintAndTextWatcher(editTextEbar, "Email");
-    }
-
-
-    private void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
+    public static void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
         // --- Hint Styling: 12sp size and 50% Black color ---
         SpannableString ss = new SpannableString(hintText);
 

@@ -23,8 +23,6 @@ public class Changeinputsizeregis3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load layout file
-        setContentView(R.layout.activity_change_input_size);
 
 
         AppCompatEditText etpas = findViewById(R.id.etpas);

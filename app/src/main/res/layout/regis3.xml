@@ -16,7 +16,7 @@
     <!-- DOB-->
 
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etpas"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -76,7 +76,7 @@
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="64dp" />
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etconpa"
         android:layout_width="300dp"
         android:layout_height="50dp"
@@ -99,15 +99,18 @@
         android:id="@+id/conerror"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="268dp"
         android:fontFamily="@font/popreg"
         android:text="*Password"
         android:textColor="#FF0000"
         android:textSize="12sp"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.683"
-        tools:layout_editor_absoluteX="70dp"
         tools:visibility="visible" />
 
     <TextView
