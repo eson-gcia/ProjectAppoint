@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="@android:color/white">
+
+    <!-- Right side: View Score button -->
+    <TextView
+        android:id="@+id/btnViewScore"
+        android:layout_width="90dp"
+        android:layout_height="32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="View Score"
+        android:textColor="#3E3EFF"
+        android:textSize="12sp"
+        android:background="@drawable/viewscore_outline"
+        android:padding="4dp" />
+
+    <!-- Patient + Doctor Container -->
+    <LinearLayout
+        android:id="@+id/nameContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="12dp"
+        android:layout_toStartOf="@id/btnViewScore">
+
+        <TextView
+            android:id="@+id/txtPatientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Patient"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtDoctorName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Dr. Therapist)"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+    <!-- Date + Separator + Time -->
+    <LinearLayout
+        android:id="@+id/dateTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/nameContainer"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="October 26, 2025"
+            android:textSize="15sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/txtSeparator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" | "
+            android:textSize="13sp"
+            android:textColor="#000000"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00 A.M."
+            android:textSize="15sp"
+            android:textColor="#000000" />
+    </LinearLayout>
+
+    <!-- Status badge -->
+    <TextView
+        android:id="@+id/txtStatusBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scheduled"
+        android:textSize="13sp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:textColor="@color/black"
+        android:background="@drawable/status_scheduled"
+        android:layout_below="@id/dateTimeContainer"
+        android:layout_marginTop="8dp" />
+
+    <!-- GMeet Link Box -->
+    <TextView
+        android:id="@+id/txtMeetingLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="meet.link/abcdefghijklmnopqrsyuvwxy"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:background="@drawable/rounded_border_gray"
+        android:layout_below="@id/txtStatusBadge"
+        android:layout_marginTop="10dp" />
+
+    <!-- Bottom Buttons: Reschedule + Cancel -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/txtMeetingLink"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:id="@+id/btnReschedule"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/rounded_brown">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/reschedicon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reschedule"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginStart="14dp"
+            android:background="@drawable/rounded_brown">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/cancelicon1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
