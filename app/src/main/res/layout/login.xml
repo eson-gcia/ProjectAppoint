@@ -3,227 +3,234 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".Changeinputsizelogin"
+    tools:context=".LoginActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-104dp">
 
+
     <!-- Company logo -->
+
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="340dp"
-        android:layout_height="364dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="303dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="64dp"
+        android:adjustViewBounds="true"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
-        app:srcCompat="@drawable/__10"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/__10" />
 
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="300dp"
-        android:layout_height="0.5dp"
-        android:background="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.627"
-        tools:ignore="MissingConstraints" />
-
-    <CheckBox
-        android:id="@+id/checkBoxRememberMe"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:button="@drawable/checkbox_selector"
-        android:buttonTintMode="multiply"
-        android:textColorLink="#FFFFFF"
-        app:buttonCompat="@drawable/checkbox_selector"
-        app:buttonIcon="@drawable/checkbox_selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.121"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/eTEmail"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/background_login"
+            android:fontFamily="@font/popreg"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvEmailError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/popreg"
+                android:text="*Required"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPassword"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_login"
+            android:ems="10"
+            android:fontFamily="@font/popreg"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvPasswordError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/popreg"
+                android:text="*Required"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#000000"
+            tools:ignore="MissingConstraints" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbRemember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTintMode="multiply"
+                    android:button="@drawable/checkbox_selector"
+                    app:buttonCompat="@drawable/checkbox_selector"
+                    app:buttonIcon="@drawable/checkbox_selector"
+                    android:clickable="true"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/popreg"
+                    android:text="Remember Me"
+                    android:textColor="#1D1A1A"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvForgotPasswordClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:fontFamily="@font/popreg"
+                android:padding="10dp"
+                android:text="Forgot Password"
+                android:textColor="#0000FF"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="Remember Me"
-        android:textColor="#1D1A1A"
-        android:textSize="12sp"
+        android:layout_marginBottom="68dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.261"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.659"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonLogin"
-        android:layout_width="227dp"
-        android:layout_height="33dp"
-        android:background="@drawable/buttonradius"
-        android:fontFamily="@font/popbold"
-        android:gravity="center"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="LOGIN"
-        android:textAllCaps="true"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.724"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editTextPW"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/background_login"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingStart="16dp"
-        android:paddingEnd="18dp"
-        android:singleLine="true"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.556"
-        tools:ignore="MissingConstraints" />
-
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/editTextE"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/background_login"
-        android:fontFamily="@font/popreg"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
-        android:paddingEnd="18dp"
-        android:singleLine="true"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textViewEError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="*Password"
-        android:textColor="#FF0000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608"
         tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
+        tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/textViewRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:fontFamily="@font/popreg"
-        android:text="Don't have an account?"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.752"
-        tools:ignore="MissingConstraints" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            android:layout_width="227dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/buttonradius"
+            android:fontFamily="@font/popbold"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="LOGIN"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewRegisterQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:fontFamily="@font/popreg"
-        android:text="Register"
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.709"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.751"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/textViewPWError"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="*Password"
-        android:textColor="#FF0000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.215"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502"
-        tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
+            <TextView
+                android:id="@+id/textViewRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popreg"
+                android:text="Don't have an account?"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:fontFamily="@font/popreg"
-        android:text="Forgot Password"
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.803"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.659"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tvRegisterClickable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:clickable="true"
+                android:fontFamily="@font/popreg"
+                android:padding="10dp"
+                android:text="Register"
+                android:textColor="#0000FF"
+                android:textSize="12sp"
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

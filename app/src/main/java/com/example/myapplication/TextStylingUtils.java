@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import android.graphics.Color;
-import android.os.Bundle;
 import android.text.Editable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -9,38 +8,22 @@ import android.text.TextWatcher;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.util.TypedValue;
+import android.view.View;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 
-public class Changeinputsizeregis2 extends AppCompatActivity {
+public class TextStylingUtils {
 
     // Define standard sizes for reuse
-    private static final float HINT_SIZE_SP = 12f;
+    private static final float HINT_SIZE_SP = 14f;
     private static final float TYPED_TEXT_SIZE_SP = 16f;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-        // 4. Setup Gender Field
-        AppCompatEditText etgen = findViewById(R.id.etgen);
-        setupHintAndTextWatcher(etgen, "Gender");
-
-        // 5. Setup DOB Field
-        AppCompatEditText etdob = findViewById(R.id.etdob);
-        setupHintAndTextWatcher(etdob, "Date of Birth");
-
-
-    }
-
-
-    private void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
+    public static void setupHintAndTextWatcher(final AppCompatEditText editText, String hintText) {
         // --- Hint Styling: 12sp size and 50% Black color ---
         SpannableString ss = new SpannableString(hintText);
 
         // Set hint size to 12sp (false = SP, true = DP)
-        ss.setSpan(new AbsoluteSizeSpan((int) HINT_SIZE_SP, false), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(new AbsoluteSizeSpan((int) HINT_SIZE_SP, true), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
 
         // Set 50% opacity black color (#80000000)
         ss.setSpan(new ForegroundColorSpan(Color.parseColor("#80000000")), 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
@@ -71,4 +54,21 @@ public class Changeinputsizeregis2 extends AppCompatActivity {
             }
         });
     }
+
+    public static void showAndFadeOut(View view, long visibleDurationMs) {
+
+        // Instantly show the view
+        view.setAlpha(1f);
+        view.setVisibility(View.VISIBLE);
+
+        // Wait, then fade out
+        view.postDelayed(() -> {
+            view.animate()
+                    .alpha(0f)
+                    .setDuration(200)
+                    .withEndAction(() -> view.setVisibility(View.INVISIBLE))
+                    .start();
+        }, visibleDurationMs);
+    }
+
 }

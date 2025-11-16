@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <!-- Regis Step 1 -->
+    <ViewStub
+        android:id="@+id/stubregis1"
+        android:inflatedId="@+id/layoutregis1"
+        android:layout="@layout/regis1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!-- Regis Step 2 -->
+    <ViewStub
+        android:id="@+id/stubregis2"
+        android:inflatedId="@+id/layoutregis2"
+        android:layout="@layout/regis2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!-- Regis Step 3 -->
+    <ViewStub
+        android:id="@+id/stubregis3"
+        android:inflatedId="@+id/layoutregis3"
+        android:layout="@layout/regis3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</FrameLayout>

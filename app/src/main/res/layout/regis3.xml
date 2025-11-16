@@ -16,210 +16,261 @@
     <!-- DOB-->
 
 
-    <EditText
-        android:id="@+id/etpas"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/background_login"
-        android:fontFamily="@font/popreg"
-        android:hint="Password"
-        android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
-        android:paddingEnd="18dp"
-        android:singleLine="true"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.411"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/parerror"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="*Password"
-        android:textColor="#FF0000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.207"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.466"
-        tools:ignore="MissingConstraints"
-        tools:visibility="visible" />
-
-    <TextView
-        android:id="@+id/editTextText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:textColor="@color/black"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="Password must be:"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.497" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="291dp"
-        android:layout_height="293dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="303dp"
+        android:layout_height="248dp"
+        android:layout_marginTop="64dp"
+        android:adjustViewBounds="true"
+        android:padding="16dp"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.088"
-        app:srcCompat="@drawable/__10"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/__10" />
 
-    <EditText
-        android:id="@+id/etconpa"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:background="@drawable/background_login"
-        android:fontFamily="@font/popreg"
-        android:hint="Confirm Password"
-        android:inputType="textEmailAddress"
-        android:paddingStart="16dp"
-        android:paddingEnd="18dp"
-        android:singleLine="true"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631"
-        tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="412dp"
+        android:layout_height="384dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:layout_editor_absoluteX="0dp">
 
-    <TextView
-        android:id="@+id/conerror"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="*Password"
-        android:textColor="#FF0000"
-        android:textSize="12sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.675"
-        tools:visibility="visible" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="By registration you agreed upon our"
-        android:textColor="#1D1A1A"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.773" />
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etpas"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/background_login"
+            android:fontFamily="@font/popreg"
+            android:hint="Password"
+            android:inputType="textEmailAddress"
+            android:paddingStart="16dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textViewpol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:fontFamily="@font/popreg"
-        android:text="Privacy Policy. "
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.785"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797"
-        tools:ignore="MissingConstraints" />
+        <LinearLayout
+            android:layout_width="284dp"
+            android:layout_height="111dp"
+            android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/popreg"
-        android:text="and"
-        android:textColor="#1D1A1A"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.568"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797" />
+            <TextView
+                android:id="@+id/tvgenError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/popreg"
+                android:text="*Required"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="invisible" />
 
-    <CheckBox
-        android:id="@+id/checkcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:button="@drawable/checkbox_selector"
-        android:buttonTintMode="multiply"
-        app:buttonCompat="@drawable/checkbox_selector"
-        app:buttonIcon="@drawable/checkbox_selector"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78"
-        tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/tvstre1Error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/popreg"
+                android:orientation="vertical"
+                android:text="Password must be:"
+                android:textColor="#000000"
+                android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/textViewterm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:fontFamily="@font/popreg"
-        android:text="Terms and Condition "
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.303"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.797"
-        tools:ignore="MissingConstraints" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSecond"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvBeside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="minimum of 10 characters"
+                    android:textColor="#0000FF"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSecond"
+                    android:layout_width="17dp"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvBeside"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="maximum of 16 characters"
+                    android:textColor="#0000FF"
+                    android:textSize="12sp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etconpa"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/background_login"
+            android:ems="10"
+            android:fontFamily="@font/popreg"
+            android:hint="Confirm Password"
+            android:inputType="textPassword"
+            android:paddingStart="16dp"
+            android:paddingEnd="18dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="37dp">
+
+            <TextView
+                android:id="@+id/tvlnError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:fontFamily="@font/popreg"
+                android:text="*Required"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="88dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <!-- Row: CheckBox + main TextView -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cbRemember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selector"
+                    android:buttonTintMode="multiply"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    app:buttonCompat="@drawable/checkbox_selector"
+                    app:buttonIcon="@drawable/checkbox_selector" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/popreg"
+                    android:text="By registration you agreed upon our"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- Horizontal row: three TextViews directly beneath main TextView -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_marginStart="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Terms and Condition "
+                    android:textColor="#0000FF"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="and"
+                    android:textColor="#000000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="85dp"
+                    android:layout_height="match_parent"
+                    android:text="Privacy Policy"
+                    android:textColor="#0000FF"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnback2"
         android:layout_width="77dp"
         android:layout_height="37dp"
+        android:layout_marginTop="95dp"
         android:background="@drawable/buttonradius"
         android:backgroundTint="#68382E"
         android:fontFamily="@font/popbold"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
-        android:text="BACK"
+        android:text="BACK "
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatButton
@@ -242,73 +293,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.968" />
-
-
-    <TextView
-        android:id="@+id/editTextTextda"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="-"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.532" />
-
-    <TextView
-        android:id="@+id/editTextTextda2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="-"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
-
-    <TextView
-        android:id="@+id/editTextTexmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="minimum of 10 characters"
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
-
-    <TextView
-        android:id="@+id/editTextTextma"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:fontFamily="@font/popreg"
-        android:inputType="text"
-        android:text="maximum of 16 characters"
-        android:textColor="#0000FF"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.372"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.557" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
