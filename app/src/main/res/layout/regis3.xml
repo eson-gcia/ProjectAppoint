@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".Changeinputsizeregis3"
+    tools:context=".regis3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
-    tools:layout_editor_absoluteX="18dp"
-    tools:layout_editor_absoluteY="-3dp">
+    tools:layout_editor_absoluteX="-18dp"
+    tools:layout_editor_absoluteY="-104dp">
 
     <!-- Company logo -->
 
@@ -42,6 +42,8 @@
         tools:layout_editor_absoluteX="0dp">
 
 
+
+
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/etpas"
             android:layout_width="300dp"
@@ -52,7 +54,7 @@
             android:background="@drawable/background_login"
             android:fontFamily="@font/popreg"
             android:hint="Password"
-            android:inputType="textEmailAddress"
+            android:inputType="textPassword"
             android:paddingStart="16dp"
             android:paddingEnd="18dp"
             android:singleLine="true"
@@ -66,13 +68,12 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/tvgenError"
+                android:id="@+id/tvgenError444"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
-                android:textColor="#FF0000"
+                android:text=""
                 android:textSize="12sp"
                 android:visibility="invisible" />
 
@@ -92,7 +93,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvSecond"
+                    android:id="@+id/tvSecond1"
                     android:layout_width="17dp"
                     android:layout_height="wrap_content"
                     android:text="-"
@@ -101,7 +102,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvBeside"
+                    android:id="@+id/tvmin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="minimum of 10 characters"
@@ -125,7 +126,7 @@
                     android:textSize="14sp" />
 
                 <TextView
-                    android:id="@+id/tvBeside"
+                    android:id="@+id/tvmax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="maximum of 16 characters"
@@ -161,12 +162,12 @@
             android:layout_height="37dp">
 
             <TextView
-                android:id="@+id/tvlnError"
+                android:id="@+id/tvlnError51"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
+                android:text="*"
                 android:textColor="#FF0000"
                 android:textSize="12sp"
                 android:visibility="invisible" />
@@ -187,17 +188,15 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/cbRemember"
+                    android:id="@+id/cbAccept"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/checkbox_selector"
-                    android:buttonTintMode="multiply"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
+                    android:buttonTint="@null"
+                    app:buttonTint="@null"
                     android:paddingStart="10dp"
-                    android:paddingEnd="0dp"
-                    app:buttonCompat="@drawable/checkbox_selector"
-                    app:buttonIcon="@drawable/checkbox_selector" />
+                    android:minWidth="0dp"
+                    android:minHeight="0dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -221,7 +220,6 @@
                     android:id="@+id/tv1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:text="Terms and Condition "
                     android:textColor="#0000FF"
                     android:textSize="12sp" />
@@ -251,48 +249,61 @@
     </LinearLayout>
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnback2"
-        android:layout_width="77dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="95dp"
-        android:background="@drawable/buttonradius"
-        android:backgroundTint="#68382E"
-        android:fontFamily="@font/popbold"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="BACK "
-        android:textAllCaps="true"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginBottom="25dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.911">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnmakeacc"
-        android:layout_width="119dp"
-        android:layout_height="37dp"
-        android:background="@drawable/buttonrad1"
-        android:backgroundTint="@color/button_enabled_state"
-        android:enabled="true"
-        android:fontFamily="@font/popbold"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="Create Account"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.917"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.968" />
+        <!-- Horizontal row for the 2 buttons -->
+        <LinearLayout
+            android:layout_width="395dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fitsSystemWindows="true"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnback2"
+                android:layout_width="77dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="176dp"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#68382E"
+                android:fontFamily="@font/popbold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="BACK"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnmakeacc"
+                android:layout_width="119dp"
+                android:layout_height="37dp"
+                android:background="@drawable/buttonrad1"
+                android:backgroundTint="@color/button_enabled_state"
+                android:enabled="false"
+                android:fontFamily="@font/popbold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="Create Account"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
