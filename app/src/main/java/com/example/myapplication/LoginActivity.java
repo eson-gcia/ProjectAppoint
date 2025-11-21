@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -10,7 +13,6 @@ import androidx.appcompat.widget.AppCompatEditText;
 
 import java.util.Objects;
 
-
 public class LoginActivity extends AppCompatActivity {
 
     @Override
@@ -18,37 +20,89 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
+        // ----------------- Views -----------------
         AppCompatEditText editTextE = findViewById(R.id.eTEmail);
         AppCompatEditText editTextPW = findViewById(R.id.etPassword);
+        TextView tvErrorEmail = findViewById(R.id.tvEmailError);
+        TextView tvErrorPassword = findViewById(R.id.tvPasswordError);
+        AppCompatButton buttonLogin = findViewById(R.id.btnLogin);
+        TextView tvForgotPassword = findViewById(R.id.tvForgotPasswordClickable);
+        TextView tvRegisterClickable = findViewById(R.id.tvRegisterClickable);
+        CheckBox cbRemember = findViewById(R.id.cbRemember);
+
+        // ----------------- SharedPreferences -----------------
+        SharedPreferences sharedPreferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
+        boolean rememberMe = sharedPreferences.getBoolean("remember_me", false);
+        cbRemember.setChecked(rememberMe);
+        if (rememberMe) {
+            editTextE.setText(sharedPreferences.getString("saved_email", ""));
+            editTextPW.setText(sharedPreferences.getString("saved_password", ""));
+        }
+
+        // ----------------- Hint & TextWatcher -----------------
         TextStylingUtils.setupHintAndTextWatcher(editTextE, "Email");
         TextStylingUtils.setupHintAndTextWatcher(editTextPW, "Password");
 
-        TextView tvErrorEmail = findViewById(R.id.tvEmailError);
-        TextView tvErrorPassword = findViewById(R.id.tvPasswordError);
-
-        AppCompatButton buttonLogin = findViewById(R.id.btnLogin);
+        // ----------------- Login button -----------------
         buttonLogin.setOnClickListener(v -> {
             String email = Objects.requireNonNull(editTextE.getText()).toString().trim();
             String password = Objects.requireNonNull(editTextPW.getText()).toString().trim();
             boolean validateSuccess = true;
 
+            // ----------------- Validations -----------------
             if (email.isEmpty()) {
-                TextStylingUtils.showAndFadeOut(tvErrorEmail, 3000);
+                TextStylingUtils.showAndFadeOut(tvErrorEmail, 4000);
                 validateSuccess = false;
                 editTextE.requestFocus();
             }
 
             if (password.isEmpty()) {
-                TextStylingUtils.showAndFadeOut(tvErrorPassword, 3000);
+                TextStylingUtils.showAndFadeOut(tvErrorPassword, 4000);
                 validateSuccess = false;
                 editTextPW.requestFocus();
             }
 
+            // ----------------- Temporary login & Remember Me -----------------
             if (validateSuccess) {
+                String TEMP_EMAIL = "test";
+                String TEMP_PASSWORD = "123";
 
+                if (email.equals(TEMP_EMAIL) && password.equals(TEMP_PASSWORD)) {
+                    if (cbRemember.isChecked()) {
+                        sharedPreferences.edit()
+                                .putString("saved_email", email)
+                                .putString("saved_password", password)
+                                .putBoolean("remember_me", true)
+                                .apply();
+                    } else {
+                        sharedPreferences.edit()
+                                .remove("saved_email")
+                                .remove("saved_password")
+                                .putBoolean("remember_me", false)
+                                .apply();
+                    }
+
+
+                    // <--- Add this block to navigate to PatientDashboard --->
+                    Intent intent = new Intent(LoginActivity.this, PatientDashboard.class);
+                    startActivity(intent);
+                    finish();
+
+                } else {
+                    TextStylingUtils.showAndFadeOut(tvErrorEmail, 4000);
+                    TextStylingUtils.showAndFadeOut(tvErrorPassword, 4000);
+                }
             }
         });
 
+        // ----------------- Forgot Password link -----------------
+        tvForgotPassword.setOnClickListener(v -> {
+            startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+        });
 
+        // ----------------- Register link -----------------
+        tvRegisterClickable.setOnClickListener(v -> {
+            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+        });
     }
 }

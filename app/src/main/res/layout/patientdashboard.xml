@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootDashboard"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:fitsSystemWindows="true"
     android:background="#FFF7D6"
     tools:context=".PatientDashboard">
 
@@ -20,7 +22,7 @@
             android:layout_height="87dp"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
             android:src="@drawable/__10" />
 
 
@@ -79,7 +81,7 @@
     <!-- Illustration and tagline -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="415dp"
+        android:layout_height="335dp"
         android:padding="1dp">
 
 
@@ -89,16 +91,16 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/illustration"
-            android:layout_width="261dp"
-            android:layout_height="342dp"
+            android:layout_width="272dp"
+            android:layout_height="314dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="152dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="-1dp"
-            android:layout_marginBottom="71dp"
+            android:layout_marginStart="137dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="20dp"
             android:contentDescription="Illustration"
             android:scaleType="centerCrop"
             android:src="@drawable/background_image"
@@ -106,19 +108,19 @@
 
         <TextView
             android:id="@+id/text_description1"
-            android:layout_width="180dp"
-            android:layout_height="116dp"
+            android:layout_width="190dp"
+            android:layout_height="154dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="3dp"
-            android:layout_marginTop="125dp"
-            android:layout_marginEnd="236dp"
-            android:layout_marginBottom="183dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="216dp"
+            android:layout_marginBottom="70dp"
             android:fontFamily="@font/popreg"
             android:lineSpacingExtra="4dp"
-            android:text="Every conversation matters. GlimmerMind bridges the gap between you and your clients, creating space for real connection and care."
+            android:text="Your wellbeing matters. GlimmerMind is here to support every step of your journey, helping you feel heard, understood, and cared for."
             android:textColor="#000000"
             android:textSize="12sp" />
 
@@ -129,8 +131,8 @@
 
 
     <GridLayout
-        android:layout_width="315dp"
-        android:layout_height="269dp"
+        android:layout_width="314dp"
+        android:layout_height="293dp"
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:alignmentMode="alignMargins"
@@ -165,8 +167,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
                 android:layout_marginTop="10dp"
+                android:clickable="true"
                 android:fontFamily="@font/popreg"
                 android:text="Manage Profile"
                 android:textColor="#000000"
@@ -228,8 +230,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:clickable="true"
                 android:layout_marginTop="10dp"
+                android:clickable="true"
                 android:fontFamily="@font/popreg"
                 android:text="Take Assessment Test"
                 android:textAlignment="center"
@@ -280,6 +282,8 @@
             android:id="@+id/thefooterContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="6dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="4">
@@ -290,27 +294,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/theicon_home"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/navhomeon"
-                    android:contentDescription="Home" />
+                    android:contentDescription="Home"
+                    android:src="@drawable/navhomeon" />
 
                 <TextView
                     android:id="@+id/text_home1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/popreg"
                     android:text="Home"
-                    android:textSize="13sp"
                     android:textColor="#000000"
-                    android:fontFamily="@font/popreg" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <!-- Appointments -->
@@ -319,27 +323,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/theicon_appointments"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/navappointoff"
-                    android:contentDescription="Appointments" />
+                    android:contentDescription="Appointments"
+                    android:src="@drawable/navappointoff" />
 
                 <TextView
                     android:id="@+id/text_appointments1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/popreg"
                     android:text="Appointments"
-                    android:textSize="12sp"
                     android:textColor="#000000"
-                    android:fontFamily="@font/popreg" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Notifications -->
@@ -350,10 +354,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/theicon_notifications"
@@ -378,27 +382,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center"
                 android:clickable="true"
-                android:focusable="true">
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/theicon_profile"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/navprofoff"
-                    android:contentDescription="Profile" />
+                    android:contentDescription="Profile"
+                    android:src="@drawable/navprofoff" />
 
                 <TextView
                     android:id="@+id/text_profile1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/popreg"
                     android:text="Profile"
-                    android:textSize="13sp"
                     android:textColor="#000000"
-                    android:fontFamily="@font/popreg" />
+                    android:textSize="13sp" />
             </LinearLayout>
 
         </LinearLayout>

@@ -103,8 +103,9 @@
                     android:layout_height="28dp"
                     android:clickable="true"
                     android:focusable="true"
+
                     android:padding="4dp"
-                    android:src="@drawable/ic_arrow_back" />
+                    android:src="@drawable/arrowback" />
 
                 <TextView
                     android:layout_width="0dp"

@@ -3,25 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    tools:context=".Changeinputsizeregis2"
+    tools:context=".regis2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF7D1"
+    tools:layout_editor_absoluteX="-18dp"
+    tools:layout_editor_absoluteY="-104dp">
 
-    tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="27dp">
+
 
     <!-- Company logo -->
 
 
-    <!-- Gender-->
 
-    <!-- DOB-->
-
-
-
-
-
+    <!-- First Name -->
 
     <ImageView
         android:id="@+id/imageView3"
@@ -40,7 +35,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="48dp"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
@@ -56,8 +51,8 @@
             android:layout_marginBottom="1dp"
             android:background="@drawable/background_login"
             android:fontFamily="@font/popreg"
-            android:hint="Gender "
-            android:inputType="textEmailAddress"
+            android:hint="Gender"
+            android:inputType="textPersonName"
             android:paddingStart="16dp"
             android:paddingEnd="18dp"
             android:singleLine="true"
@@ -70,12 +65,12 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tvgenError"
+                android:id="@+id/tvgenError33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
+                android:text="*Gender is missing"
                 android:textColor="#FF0000"
                 android:textSize="12sp"
                 android:visibility="invisible" />
@@ -92,7 +87,7 @@
             android:ems="10"
             android:fontFamily="@font/popreg"
             android:hint="Date of Birth"
-            android:inputType="textPassword"
+            android:inputType="text"
             android:paddingStart="16dp"
             android:paddingEnd="18dp"
             android:singleLine="true"
@@ -104,61 +99,74 @@
             android:layout_height="37dp">
 
             <TextView
-                android:id="@+id/tvlnError"
+                android:id="@+id/tvlnError4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
+                android:text="*Date of Birth is missing"
                 android:textColor="#FF0000"
                 android:textSize="12sp"
                 android:visibility="invisible" />
         </LinearLayout>
 
-
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnback1"
-        android:layout_width="77dp"
-        android:layout_height="37dp"
-        android:background="@drawable/buttonradius"
-        android:backgroundTint="#68382E"
-        android:fontFamily="@font/popbold"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="BACK "
-        android:textAllCaps="true"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.893"
-        tools:ignore="MissingConstraints" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btntonext1"
-        android:layout_width="77dp"
-        android:layout_height="37dp"
-        android:background="@drawable/buttonradius"
-        android:backgroundTint="#68382E"
-        android:fontFamily="@font/popbold"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        android:text="NEXT"
-        android:textAllCaps="true"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.893"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintVertical_bias="0.911">
+
+        <!-- Horizontal row for the 2 buttons -->
+        <LinearLayout
+            android:layout_width="376dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fitsSystemWindows="true"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnback1"
+                android:layout_width="77dp"
+                android:layout_height="37dp"
+                android:layout_marginEnd="210dp"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#68382E"
+                android:fontFamily="@font/popbold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="BACK "
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btntonext1"
+                android:layout_width="77dp"
+                android:layout_height="37dp"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#68382E"
+                android:fontFamily="@font/popbold"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="NEXT"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

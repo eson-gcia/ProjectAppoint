@@ -66,8 +66,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="14dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
+                android:text="*Email missing or Invalid email"
                 android:textColor="#FF0000"
+                android:animateLayoutChanges="false"
                 android:textSize="12sp"
                 android:visibility="invisible" />
         </LinearLayout>
@@ -100,8 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="4dp"
                 android:fontFamily="@font/popreg"
-                android:text="*Required"
+                android:text="*Password missing or Invalid password"
                 android:textColor="#FF0000"
+                android:animateLayoutChanges="false"
                 android:textSize="12sp"
                 android:visibility="invisible" />
         </LinearLayout>
@@ -134,15 +136,12 @@
                     android:id="@+id/cbRemember"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTintMode="multiply"
                     android:button="@drawable/checkbox_selector"
-                    app:buttonCompat="@drawable/checkbox_selector"
-                    app:buttonIcon="@drawable/checkbox_selector"
-                    android:clickable="true"
-                    android:minWidth="0dp"
-                    android:minHeight="0dp"
+                    android:buttonTint="@null"
+                    app:buttonTint="@null"
                     android:paddingStart="10dp"
-                    android:paddingEnd="0dp" />
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"

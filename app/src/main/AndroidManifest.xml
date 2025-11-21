@@ -21,6 +21,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />  <!-- can be false unless you need it exported -->
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PatientDashboard"
+            android:exported="false" />
+
     </application>
 
 </manifest>
