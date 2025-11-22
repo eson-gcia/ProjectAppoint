@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GlimmerMind</string>
+    <string name="logo">GlimmerMind</string>
+    <string name="october_1">October 1</string>
+    <string name="_8_00_a_m">8:00 A.M.</string>
+    <string name="ipsum_lorem">Ipsum Lorem</string>
+    <string name="patient">Patient</string>
+    <string name="patient_profile">Patient Profile</string>
+</resources>
