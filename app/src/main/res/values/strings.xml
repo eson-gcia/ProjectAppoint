@@ -6,4 +6,6 @@
     <string name="ipsum_lorem">Ipsum Lorem</string>
     <string name="patient">Patient</string>
     <string name="patient_profile">Patient Profile</string>
+    <string name="profile">Profile</string>
+    <string name="glimmermind_logo">GlimmerMind Logo</string>
 </resources>

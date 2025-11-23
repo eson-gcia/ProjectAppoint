@@ -5,23 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF4E0"
-    tools:context=".MainActivity">
+    tools:context=".pt_Appoint_MainActivity">
 
     <!-- Header -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp"
         android:background="#FFF3B9"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
         <ImageView
             android:id="@+id/logo"
             android:layout_width="167dp"
-            android:layout_height="95dp"
-            android:contentDescription="GlimmerMind Logo"
+            android:layout_height="96dp"
+            android:contentDescription="@string/glimmermind_logo"
             android:importantForAccessibility="yes"
             android:scaleType="centerCrop"
             android:src="@drawable/logo_icon" />
@@ -29,37 +29,38 @@
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="end">
+            android:gravity="end"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ipsum Lorem"
                 android:textColor="#000000"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Patient"
                 android:textColor="#000000"
-                android:textSize="12sp"/>
+                android:textSize="15sp" />
         </LinearLayout>
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:contentDescription="Patient Profile"
-            android:importantForAccessibility="yes" android:src="@drawable/pfp_icon"
             android:layout_marginStart="12dp"
-            android:background="@drawable/pfp_icon"/>
+            android:background="@drawable/pfp_icon"
+            android:contentDescription="Patient Profile"
+            android:importantForAccessibility="yes"
+            android:src="@drawable/pfp_icon" />
     </LinearLayout>
 
     <!-- Main Content -->
@@ -98,14 +99,6 @@
         </LinearLayout>
 
         <!-- Appointment Card -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Book an Appointment"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -198,24 +191,35 @@
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="Next Page"/>
                 </LinearLayout>
+
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- Book Button -->
         <Button
             android:id="@+id/btnBookAppointment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="215dp"
+            android:layout_height="56dp"
             android:layout_gravity="center_horizontal"
-            android:text="Book Appointment"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
-            android:textAllCaps="false"
-            android:paddingStart="32dp"
-            android:paddingEnd="32dp"
+            android:background="@drawable/btn_appoint"
+            android:bufferType="normal"
+            android:clickable="true"
+            android:contextClickable="true"
+            android:enabled="true"
+            android:foregroundTintMode="src_atop"
+            android:paddingStart="30dp"
             android:paddingTop="12dp"
+            android:paddingEnd="32dp"
             android:paddingBottom="12dp"
-            android:background="@drawable/button_background"/>
+            android:text="Book Appoinment"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textColorLink="#68382E"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Book Button -->
+
     </LinearLayout>
 
     <!-- Bottom Navigation -->
@@ -324,7 +328,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:layout_marginTop="4dp"/>

@@ -1,7 +1,7 @@
 package com.example.test;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -15,7 +15,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class pt_Appoint_MainActivity extends AppCompatActivity {
 
     private static final int ITEMS_PER_PAGE = 6;
 
@@ -233,6 +233,7 @@ public class MainActivity extends AppCompatActivity {
         updateCurrentPage();
     }
 
+    @SuppressLint("SetTextI18n")
     private void updateCurrentPage() {
         currentPageAppointments.clear();
 
