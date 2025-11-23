@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     private List<Appointment> appointments;
     private int selectedPosition = -1;
     private final OnAppointmentClickListener listener;
-    private List<String> timeSlots;
+    private final List<String> timeSlots;
 
     public interface OnAppointmentClickListener {
         void onAppointmentClick(int position, Appointment appointment);
@@ -26,26 +28,26 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     public AppointmentAdapter(List<Appointment> appointments, OnAppointmentClickListener listener) {
         this.appointments = appointments;
         this.listener = listener;
-        generateTimeSlots();
+        this.timeSlots = generateTimeSlots();
     }
 
-    private void generateTimeSlots() {
-        timeSlots = new ArrayList<>();
-        // Generate time slots from 9 AM to 5 PM
-        String[] amPm = {"A.M.", "P.M."};
+    private List<String> generateTimeSlots() {
+        List<String> slots = new ArrayList<>();
 
-        // 9 AM to 11 AM
+        // 9 AM - 11 AM
         for (int hour = 9; hour <= 11; hour++) {
-            timeSlots.add(hour + ":00 A.M.");
+            slots.add(hour + ":00 A.M.");
         }
 
         // 12 PM
-        timeSlots.add("12:00 P.M.");
+        slots.add("12:00 P.M.");
 
-        // 1 PM to 5 PM
+        // 1 PM - 5 PM
         for (int hour = 1; hour <= 5; hour++) {
-            timeSlots.add(hour + ":00 P.M.");
+            slots.add(hour + ":00 P.M.");
         }
+
+        return slots;
     }
 
     @NonNull
@@ -57,11 +59,11 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Appointment appointment = appointments.get(position);
         holder.tvDate.setText(appointment.getDate());
 
-        // Setup spinner
+        // Spinner setup
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 holder.itemView.getContext(),
                 android.R.layout.simple_spinner_item,
@@ -70,38 +72,42 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         holder.spinnerTime.setAdapter(adapter);
 
-        // Set default time
+        // Set spinner default value
         int timeIndex = timeSlots.indexOf(appointment.getTime());
-        if (timeIndex != -1) {
-            holder.spinnerTime.setSelection(timeIndex);
-        }
+        if (timeIndex != -1) holder.spinnerTime.setSelection(timeIndex);
 
         holder.spinnerTime.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                appointment.setTime(timeSlots.get(pos));
+                int currentPos = holder.getBindingAdapterPosition();
+                if (currentPos == RecyclerView.NO_POSITION) return;
+
+                appointments.get(currentPos).setTime(timeSlots.get(pos));
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
-        holder.itemView.setOnClickListener(v -> {
-            int previousPosition = selectedPosition;
-            selectedPosition = holder.getAdapterPosition();
 
-            if (previousPosition != -1) {
-                notifyItemChanged(previousPosition);
-            }
+        // Click listener
+        holder.itemView.setOnClickListener(v -> {
+            int currentPos = holder.getBindingAdapterPosition();
+            if (currentPos == RecyclerView.NO_POSITION) return;
+
+            int previous = selectedPosition;
+            selectedPosition = currentPos;
+
+            if (previous != -1) notifyItemChanged(previous);
             notifyItemChanged(selectedPosition);
 
-            // Silent selection - no toast notification
             if (listener != null) {
-                listener.onAppointmentClick(selectedPosition, appointment);
+                listener.onAppointmentClick(selectedPosition, appointments.get(selectedPosition));
             }
         });
 
+
+        // Highlight selected item
         if (position == selectedPosition) {
             holder.itemView.setBackgroundResource(R.drawable.appointment_item_selected);
         } else {
@@ -114,6 +120,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
         return appointments.size();
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     public void updateAppointments(List<Appointment> newAppointments) {
         this.appointments = newAppointments;
         this.selectedPosition = -1;
@@ -128,18 +135,17 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
     }
 
     public void clearSelection() {
-        int previousPosition = selectedPosition;
+        int previous = selectedPosition;
         selectedPosition = -1;
-        if (previousPosition != -1) {
-            notifyItemChanged(previousPosition);
-        }
+        if (previous != -1) notifyItemChanged(previous);
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    // FIX: Make it PUBLIC
+    public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvDate;
         Spinner spinnerTime;
 
-        ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvDate = itemView.findViewById(R.id.tvDate);
             spinnerTime = itemView.findViewById(R.id.spinnerTime);
