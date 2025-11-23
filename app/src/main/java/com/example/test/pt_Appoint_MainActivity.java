@@ -1,5 +1,6 @@
 package com.example.test;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -234,6 +235,7 @@ public class pt_Appoint_MainActivity extends AppCompatActivity {
         updateCurrentPage();
     }
 
+    @SuppressLint("SetTextI18n")
     private void updateCurrentPage() {
         currentPageAppointments.clear();
 
