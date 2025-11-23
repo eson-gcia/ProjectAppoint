@@ -16,7 +16,7 @@ public class AppointmentAdapter extends RecyclerView.Adapter<AppointmentAdapter.
 
     private List<Appointment> appointments;
     private int selectedPosition = -1;
-    private OnAppointmentClickListener listener;
+    private final OnAppointmentClickListener listener;
     private List<String> timeSlots;
 
     public interface OnAppointmentClickListener {

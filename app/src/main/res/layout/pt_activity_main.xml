@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF4E0"
-    tools:context=".MainActivity">
+    tools:context=".pt_Appoint_MainActivity">
 
     <!-- Header -->
     <LinearLayout
@@ -21,7 +21,7 @@
             android:id="@+id/logo"
             android:layout_width="167dp"
             android:layout_height="95dp"
-            android:contentDescription="GlimmerMind Logo"
+            android:contentDescription="@string/glimmermind_logo"
             android:importantForAccessibility="yes"
             android:scaleType="centerCrop"
             android:src="@drawable/logo_icon" />
@@ -85,7 +85,7 @@
                 android:layout_height="48dp"
                 android:src="@drawable/btn_left"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="Back"
+                android:contentDescription="@string/back"
                 android:layout_marginEnd="8dp"/>
 
             <TextView
@@ -98,14 +98,6 @@
         </LinearLayout>
 
         <!-- Appointment Card -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="Book an Appointment"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="bold" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -135,14 +127,14 @@
                         android:layout_height="48dp"
                         android:src="@drawable/btn_left"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Previous Month"/>
+                        android:contentDescription="@string/previous_month"/>
 
                     <TextView
                         android:id="@+id/tvMonth"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="October 2025"
+                        android:text="@string/october_2025"
                         android:textColor="#000000"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -154,7 +146,7 @@
                         android:layout_height="48dp"
                         android:src="@drawable/btn_right"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Next Month"/>
+                        android:contentDescription="@string/next_month"/>
                 </LinearLayout>
 
                 <!-- Appointment Slots -->
@@ -178,13 +170,13 @@
                         android:layout_height="48dp"
                         android:src="@drawable/btn_left"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Previous Page"/>
+                        android:contentDescription="@string/previous_page"/>
 
                     <TextView
                         android:id="@+id/tvPageInfo"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Page 1 of 5"
+                        android:text="@string/page_1_of_5"
                         android:textColor="#000000"
                         android:textSize="14sp"
                         android:paddingStart="16dp"
@@ -196,7 +188,7 @@
                         android:layout_height="48dp"
                         android:src="@drawable/btn_right"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Next Page"/>
+                        android:contentDescription="@string/next_page"/>
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -207,7 +199,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Book Appointment"
+            android:text="@string/book_appointment"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
             android:textAllCaps="false"
@@ -242,14 +234,14 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="Patient Home"
+                android:contentDescription="@string/patient_home"
                 android:src="@drawable/home_btn"
                 app:tint="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Home"
+                android:text="@string/home"
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:layout_marginTop="4dp"/>
@@ -267,7 +259,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="Patient Appointment"
+                android:contentDescription="@string/patient_appointment"
                 android:src="@drawable/appointment_btn"
                 app:tint="#000000" />
 
@@ -275,7 +267,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Appointment"
+                android:text="@string/appointment"
                 android:textColor="#000000"
                 android:textSize="14sp" />
         </LinearLayout>
@@ -292,14 +284,14 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:contentDescription="Patient Notification"
+                android:contentDescription="@string/patient_notification"
                 android:src="@drawable/notification_btn"
                 app:tint="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notification"
+                android:text="@string/notification"
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:layout_marginTop="4dp"/>
@@ -324,7 +316,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Profile"
+                android:text="@string/profile"
                 android:textSize="15sp"
                 android:textColor="#000000"
                 android:layout_marginTop="4dp"/>

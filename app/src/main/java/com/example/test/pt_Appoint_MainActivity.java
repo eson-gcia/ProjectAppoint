@@ -1,7 +1,6 @@
 package com.example.test;
 
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -15,7 +14,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class pt_Appoint_MainActivity extends AppCompatActivity {
 
     private static final int ITEMS_PER_PAGE = 6;
 
@@ -33,10 +32,14 @@ public class MainActivity extends AppCompatActivity {
     private int currentPage = 0;
     private int totalPages = 0;
 
+    private static void onAppointmentClick(int position, Appointment appointment) {
+        // Silent selection - no toast notification
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.pt_activity_main);
 
         initializeViews();
         setupCalendar();
@@ -67,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupRecyclerView() {
         allAppointments = new ArrayList<>();
         currentPageAppointments = new ArrayList<>();
-        adapter = new AppointmentAdapter(currentPageAppointments, (position, appointment) -> {
-            // Silent selection - no toast notification
-        });
+        adapter = new AppointmentAdapter(currentPageAppointments, pt_Appoint_MainActivity::onAppointmentClick);
 
         rvAppointments.setLayoutManager(new LinearLayoutManager(this));
         rvAppointments.setAdapter(adapter);
@@ -220,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Calendar appointmentCal = (Calendar) tempCalendar.clone();
                 allAppointments.add(new Appointment(dateString, "9:00 A.M.",
-                        appointmentCal, dayName));
+                        appointmentCal));
             }
         }
 
